@@ -1,0 +1,23 @@
+.header{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background: #33B5E5;
+  color: #fff;
+  padding: 12px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: left;
+  background: #33B5E5;
+  padding: 20px 200px 20px 200px;
+}
+
+a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}

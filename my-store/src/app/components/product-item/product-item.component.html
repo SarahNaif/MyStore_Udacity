@@ -1,0 +1,23 @@
+<div class="detail-container">
+  <a routerLink="product/{{ product.id }}">
+  <img  src="{{ product.image}}" />
+</a>
+  <div class="detail-item">
+      <h2>{{ product.title }}</h2>
+      <p>{{ product.description | slice: 0:70}}</p>
+      <p>{{ product.price | currency: "USD" }}</p>
+      <form fxLayout="column" fxLayoutAlign="space-between start" >
+         <!-- <select  class="select-input" name="amount">
+              <option *ngFor="let i of count" value="{{ i }}">
+                  {{ i }}
+              </option>
+          </select> -->
+          <input class="btn-add" type="submit" value="Add to Cart" />
+      </form>
+      <br/>
+      <!-- <div>
+          <a class="back-link" routerLink="/">&lt; Back to product list</a>
+      </div> -->
+  </div>
+</div>
+
