@@ -8,7 +8,8 @@ import { Product } from 'src/app/models/product';
 })
 export class ProductItemComponent  implements OnInit{
   @Input() product!: Product;
-
+  count = ['1', '2', '3', '4', '5'];
+  
   constructor() {
     this.product = {
       id:0,

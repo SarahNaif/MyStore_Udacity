@@ -12,7 +12,7 @@ export class ProductItemDetailComponent  implements OnInit{
   products!: Product[];
   id = 0;
   product!: Product;
-
+  count = ['1', '2', '3', '4', '5'];
   constructor( private proService: ProductService, private route: ActivatedRoute,) { }
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
