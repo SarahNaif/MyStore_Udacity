@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatCardModule} from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatBadgeModule} from '@angular/material/badge';
 import { AppComponent } from './app.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ConfirmOrderComponent } from './components/confirm-order/confirm-order.component';
@@ -14,6 +16,7 @@ import { ProductItemDetailComponent } from './components/product-item-detail/pro
 import { FormComponent } from './components/form/form.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -24,14 +27,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProductItemComponent,
     ProductItemDetailComponent,
     FormComponent,
-    NavBarComponent
+    NavBarComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatSnackBarModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

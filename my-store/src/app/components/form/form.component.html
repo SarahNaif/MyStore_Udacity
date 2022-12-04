@@ -1,1 +1,44 @@
-<p>form works!</p>
+<div class="flex flex-col lg:h-screen h-auto lg:px-8 md:px-7 px-4 lg:py-20 md:py-10 py-6 justify-between overflow-y-auto">
+  <div>
+    <p class="lg:text-4xl mb-3 text-3xl font-black leading-9 text-gray-800 dark:text-white">Checkout</p>
+
+
+          <input
+              type="text"
+              class="block border border-grey-light w-full p-3 rounded mb-4 mt-14"
+              name="fullname"
+              placeholder="Full Name" />
+
+          <input
+              type="text"
+              class="block border border-grey-light w-full p-3 rounded mb-4"
+              name="email"
+              placeholder="Email" />
+
+          <input
+              type="password"
+              class="block border border-grey-light w-full p-3 rounded mb-4"
+              name="password"
+              placeholder="Password" />
+          <input
+              type="password"
+              class="block border border-grey-light w-full p-3 rounded mb-4"
+              name="confirm_password"
+              placeholder="Confirm Password" />
+
+
+
+
+      </div>
+
+
+
+  <div>
+    <div class="flex items-center pb-6 justify-between lg:pt-5 pt-20 border-t-2 border-gray-400 ">
+      <p class="text-2xl leading-normal text-gray-800 dark:text-white">Total</p>
+      <p class="text-2xl font-bold leading-normal text-right text-gray-800 dark:text-white">$240</p>
+    </div>
+    <button   type="submit" onclick="checkoutHandler1(true)" class="text-base leading-none w-full py-5 bg-gray-800 border-gray-800 border focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 text-white dark:hover:bg-gray-700">Checkout</button>
+  </div>
+
+</div>

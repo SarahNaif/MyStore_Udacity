@@ -12,13 +12,14 @@ export class ProductListComponent implements OnInit {
   title: string = 'Product';
   products: Product[] = [];
 
+
   constructor(private proServ: ProductService) { }
 
   ngOnInit(): void {
-
     this.proServ.getProducts().subscribe(data => {
       this.products = data;
     });
-    
+
   }
+
 }

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CartItem } from 'src/app/models/cart';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,5 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
+constructor(private cartService: CartService){}
+
+getItem(): number{
+  const cartItems: CartItem[] = this.cartService.getCartItems();
+  return cartItems.length
+}
+
+
 
 }
