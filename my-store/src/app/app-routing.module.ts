@@ -1,3 +1,4 @@
+import { ConfirmOrderComponent } from './components/confirm-order/confirm-order.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './components/cart/cart.component';
@@ -6,8 +7,13 @@ import { ProductListComponent } from './components/product-list/product-list.com
 
 const routes: Routes = [
 {path:"", component:ProductListComponent},
-{path:"cart", component:CartComponent},
 {path:"product/:id", component:ProductItemDetailComponent},
+{path:"cart", component:CartComponent},
+
+{
+  path: 'success/:firstName/:totalPrice',
+  component: ConfirmOrderComponent,
+},
 ];
 
 @NgModule({

@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cart, CartItem } from 'src/app/models/cart';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -8,26 +10,22 @@ import { Cart, CartItem } from 'src/app/models/cart';
 })
 export class CartComponent implements OnInit{
 
-  cart: Cart = { items: [{
-    id: 0,
-    title: "hhh",
-    price: 9,
-    image: "hhh",
-    description:"hhh",
-    quantity: 8,
-  }
-  ] };
-
-  dataSource: CartItem[] = [];
+  cart!: CartItem[];
+  totalPrice!: number;
+  @Output() userInfo = new EventEmitter();
+  constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit(): void {
-    this.dataSource =  this.cart.items;
+    this.cart = this.cartService.getCartItems();
+
   }
+
   getTotal(items: CartItem[]): number {
     return items
-      .map((item) => item.price * item.quantity)
+      .map((item) => item.price * Number(item.quantity))
       .reduce((prev, current) => prev + current, 0);
   }
+  
   }
 
 
