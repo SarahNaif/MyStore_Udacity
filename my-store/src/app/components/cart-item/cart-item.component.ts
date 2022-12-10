@@ -1,5 +1,5 @@
 import { CartService } from 'src/app/services/cart.service';
-import { Cart, CartItem } from './../../models/cart';
+import { CartItem } from './../../models/cart';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -34,7 +34,7 @@ export class CartItemComponent implements OnInit {
     this.cartService.addToCart(this.cart);
     this._snackBar.open(`${item.title} item updated to cart`, 'Ok', { duration: 3000 });
     this.change.emit(this.cart);
-    window.location.reload();
+
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute } from '@angular/router';
 import { CartItem } from 'src/app/models/cart';
 import { Product } from 'src/app/models/product';
@@ -17,7 +18,7 @@ export class ProductItemDetailComponent  implements OnInit{
   count = ['1', '2', '3', '4', '5'];
   quantity = '1';
 
-  constructor( private cartService: CartService,private proService: ProductService, private route: ActivatedRoute,) { }
+  constructor( private cartService: CartService,private proService: ProductService, private route: ActivatedRoute, private _snackBar: MatSnackBar) { }
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
       this.id = Number(params.get('id'));
@@ -32,14 +33,15 @@ export class ProductItemDetailComponent  implements OnInit{
     const cartItems: CartItem[] = this.cartService.getCartItems();
     let itemInCart = cartItems.find(item => item.id === this.product.id);
     if (itemInCart) {
-      itemInCart.quantity = this.quantity;
+      let qty = parseInt(itemInCart.quantity)
+      qty += 1;
+      itemInCart.quantity = qty.toString()
       itemInCart ? this.cartService.addToCart(cartItems) : null;
-      alert(`updated`);
+      this._snackBar.open(`The cart have been updated`, 'Ok', { duration: 3000 });
     } else {
       cartItems.push(Object.assign(this.product, { quantity: this.quantity }));
       this.cartService.addToCart(cartItems);
-      alert(`${this.product?.title
-        } has been added to your cart.`);
+      this._snackBar.open(`${this.product.title} added to the cart`, 'Ok', { duration: 3000 });
     }
 
   }

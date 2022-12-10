@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { Cart, CartItem } from 'src/app/models/cart';
+import { CartItem } from 'src/app/models/cart';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -25,7 +25,7 @@ export class CartComponent implements OnInit{
       .map((item) => item.price * Number(item.quantity))
       .reduce((prev, current) => prev + current, 0);
   }
-  
+
   }
 
 
