@@ -1,6 +1,16 @@
 # MyStore_Udacity
 
-MyStore is a single-page application built in Angular, its include : 
+
+MyStore is a single-page application built in Angular, 
+
+![]()
+
+## Live 
+
+[Demo](https://my-store-udacity.vercel.app/)
+
+
+## Feautre :
 
 - Display a list of products.
 - Add products to cart.
