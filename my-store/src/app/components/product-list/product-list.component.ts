@@ -12,7 +12,6 @@ export class ProductListComponent implements OnInit {
   title: string = 'Product';
   products: Product[] = [];
 
-
   constructor(private proServ: ProductService) { }
 
   ngOnInit(): void {

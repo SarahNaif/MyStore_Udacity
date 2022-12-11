@@ -15,6 +15,4 @@ getItem(): number{
   return cartItems.length
 }
 
-
-
 }

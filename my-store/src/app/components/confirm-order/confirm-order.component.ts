@@ -17,5 +17,12 @@ export class ConfirmOrderComponent implements OnInit{
       this.firstName = params.get('firstName');
       this.totalPrice = Number(params.get('totalPrice'));
     });
+
+
   }
+
 }
+
+
+
+

@@ -1,5 +1,5 @@
 import { CartItem } from './../../models/cart';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -13,7 +13,7 @@ export class ProductItemComponent implements OnInit{
 
   @Input() product!: Product;
   count = ['1', '2', '3', '4', '5'];
-star = 0
+  star = 0;
   quantity= "1";
   constructor(  private cartService: CartService, private _snackBar: MatSnackBar) {
     this.product = {
@@ -32,8 +32,6 @@ star = 0
   ngOnInit(): void {
     this.star = Number(this.product.rating.rate.toFixed(0))
   }
-
-
 
   onClick(): void {
     const cartItems: CartItem[] = this.cartService.getCartItems();

@@ -17,9 +17,25 @@ export class ProductItemDetailComponent  implements OnInit{
   product: Product = {} as Product;
   count = ['1', '2', '3', '4', '5'];
   quantity = '1';
+  star :number= 0;
 
-  constructor( private cartService: CartService,private proService: ProductService, private route: ActivatedRoute, private _snackBar: MatSnackBar) { }
+  constructor( private cartService: CartService,private proService: ProductService, private route: ActivatedRoute, private _snackBar: MatSnackBar) {
+
+    this.product = {
+      id: 0,
+      title: '',
+      price: 0,
+      image: '',
+      description: '',
+      rating: {
+        rate: 0,
+        count: 0,
+      },
+    };
+  }
+
   ngOnInit(): void {
+
     this.route.paramMap.subscribe((params) => {
       this.id = Number(params.get('id'));
     });
@@ -27,8 +43,13 @@ export class ProductItemDetailComponent  implements OnInit{
     this.proService.getProducts().subscribe((res) => {
       this.products = res
       this.product = this.products.filter((item)=> item.id === this.id)[0]
+      this.star = Number(this.product.rating.rate.toFixed())
     });
+
+
+
   }
+
   addProductToCart(): void {
     const cartItems: CartItem[] = this.cartService.getCartItems();
     let itemInCart = cartItems.find(item => item.id === this.product.id);
