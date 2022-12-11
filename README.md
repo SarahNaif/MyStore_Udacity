@@ -1,6 +1,5 @@
 # MyStore_Udacity
 
-
 MyStore is a single-page application built in Angular and tailwind.css
 
 ## Live 
@@ -30,6 +29,7 @@ MyStore is a single-page application built in Angular and tailwind.css
 
 To install the dependencies for this project, run the following command: 
 ```
+cd my-store
 npm install
 ```
 
