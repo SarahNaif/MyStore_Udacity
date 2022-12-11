@@ -21,17 +21,7 @@ export class ProductItemDetailComponent  implements OnInit{
 
   constructor( private cartService: CartService,private proService: ProductService, private route: ActivatedRoute, private _snackBar: MatSnackBar) {
 
-    this.product = {
-      id: 0,
-      title: '',
-      price: 0,
-      image: '',
-      description: '',
-      rating: {
-        rate: 0,
-        count: 0,
-      },
-    };
+   
   }
 
   ngOnInit(): void {

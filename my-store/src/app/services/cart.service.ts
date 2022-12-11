@@ -20,10 +20,6 @@ export class CartService {
     return cartItems ? JSON.parse(cartItems) : [];
   }
 
-
-
-
-
   removeFromCart(cartpro: CartItem): void {
     let cartpros = this.getCartItems().filter(item => item.id !== cartpro.id);
     this.clearCart();

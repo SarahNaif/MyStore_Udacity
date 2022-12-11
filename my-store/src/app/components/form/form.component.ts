@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import {FormBuilder,FormControl,FormGroup, Validators,} from '@angular/forms';
+import {FormBuilder,FormGroup, Validators,} from '@angular/forms';
 import { Router } from '@angular/router';
 import { CartService } from 'src/app/services/cart.service';
 @Component({

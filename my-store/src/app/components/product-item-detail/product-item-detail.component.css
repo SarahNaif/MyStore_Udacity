@@ -1,40 +1,4 @@
-img {
-  border-radius: 10px;
-  width: 320px;
+/* img {
   height: 300px;
-}
-.form-container{
-  display:flex;
-  justify-content: space-between;
-}
-.select-input {
-  width: 108px;
-  margin-bottom: 8px;
-}
+} */
 
-.detail-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 64px;
-border: 1px solid black;
-max-width: 700px;
-padding: 5px;
-margin: 0 auto;
-}
-
-.detail-item {
-  margin-left: 128px;
-  margin-right: 128px;
-}
-
-.back-link {
-  margin-top: 8px;
-}
-.btn-add{
-  padding: 7px;
-  color: white;
-  background-color: #33B5E5;
-  border: none;
-  border-radius: 5px;
-  }
