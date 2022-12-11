@@ -1,9 +1,7 @@
 # MyStore_Udacity
 
 
-MyStore is a single-page application built in Angular, 
-
-![]()
+MyStore is a single-page application built in Angular and tailwind.css
 
 ## Live 
 
