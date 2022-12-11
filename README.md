@@ -29,7 +29,7 @@ npm install
 On the same terminal, run the command
    ```
 ng serve
-     
+  ```   
 
 #### Sample request:
 Navigate to 
@@ -37,7 +37,7 @@ http://localhost:4200/
 
 The app will automatically reload if you change any of the source files.
 
-## References
+
 
 
 
